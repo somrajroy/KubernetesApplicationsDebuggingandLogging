@@ -1,6 +1,7 @@
 # Kubernetes Applications - Logging, Debugging & Troubleshooting.
 The popularity of Kubernetes and its ecosystem grows like a snowball rolling down Mount Everest. However Kubernetes is a very complex ecosystem. This blog will help to effectively debug and analyze kubernetes pods (applications) to make things easy.<br/>
 * Below are the official Kubernetes links which would aid in troubleshooting.
+   * [Kubernetes Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/)<br/>
    * [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)<br/>
    * [Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/)<br/>
    * [Define a Command and Arguments for a Container](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/)<br/>
