@@ -17,4 +17,4 @@ The popularity of Kubernetes and its ecosystem grows like a snowball rolling dow
 * "kubectl exec" lets developers specify the container to connect to without worrying about the Kubernetes node it’s on. This is the biggest strength as there is no need to know the node IP (details). (With SSH node details are needed)<br/>
 * By running the shell commands, one can see the container’s entire file system and check if the environment is as expected. It can also help identify whether a critical file is missing or locked, or find instances of misconfigured environment variables.<br/>
 *   Below is the format of exec command. One can use "-i" and "-t" flags with it. These two flags combined (-it) allows to execute commands inside the container but from  own local terminal. This means if someone running something like "ls" s/he will see the files in the container and not on his/her system where the terminal is actually running. In below command "sh" can also be used instead of "bash". <br/>
-        * kubectl exec -it <POD_NAME> -n <NAMESPACE>  -- bash <br/>
+        * kubectl exec -it <POD_NAME> -n <NAME_SPACE>  -- bash <br/>
