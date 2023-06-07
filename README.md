@@ -2,6 +2,12 @@
 The popularity of Kubernetes and its ecosystem grows like a snowball rolling down Mount Everest. Kubernetes is a very complex ecosystem. It is highly distribuuted and dynamic. The nodes/pods/containers can be terminated, restarted, or rescheduled at any point in time. This transient and dynamic nature of the system is a challenge in itself. This blog will help to effectively debug and analyze kubernetes pods (applications) to make things easy. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky.<br/>
 * This article provides an overview of logging for Kubernetes. It covers which types of log data are available in Kubernetes and how to access that data.
 * Kubernetes clusters consists of multiple layers that need monitoring, each producing different types of logs. This blog will help to troubleshoot and debug Kubernetes applications by gaining visibility into Kubernetes. There are also various logging tools that integrate natively with Kubernetes to make the task easier.  <br/>
+* To be effective in container orchestration using Kubernetes - a good knowledge of Linux is required. Without Linux its difficult to go far. Below are some articles to start with.  
+    * [Linux Crash Course - Data Streams (stdin, stdout & stderr)](https://www.youtube.com/watch?v=zMKacHGuIHI)<br/>
+    * [Learning Path: Kubernetes](https://developer.ibm.com/tutorials/linux-basics-and-commands/)<br/>
+    * [Learning Kubernetes](https://developer.ibm.com/series/kubernetes-learning-path/)<br/>
+    * [Learn Linux, 101: A roadmap for LPIC-1](https://developer.ibm.com/tutorials/l-lpic1-map/)<br/>
+* Additionally one should also get comfortable with containerization concepts and tools like Docker to work in Kubernetes. Containers are the building blocks of Kubernetes, so knowing about Docker is essention. [This YouTube course is very good & can be considered.](https://www.youtube.com/watch?v=RqTEHSBrYFw)<br/>
 * Below are the official Kubernetes links which would aid in troubleshooting.
    * [Kubernetes Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/)<br/>
    * [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)<br/>
