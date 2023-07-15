@@ -2,7 +2,10 @@
 The popularity of Kubernetes and its ecosystem grows like a snowball rolling down Mount Everest. Kubernetes is a very complex ecosystem. It is highly distribuuted and dynamic. The nodes/pods/containers can be terminated, restarted, or rescheduled at any point in time. This transient and dynamic nature of the system is a challenge in itself. This blog will help to effectively debug and analyze kubernetes pods (applications) to make things easy. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky.<br/>
 * This article provides an overview of logging for Kubernetes. It covers which types of log data are available in Kubernetes and how to access that data.
 * Kubernetes clusters consists of multiple layers that need monitoring, each producing different types of logs. This blog will help to troubleshoot and debug Kubernetes applications by gaining visibility into Kubernetes. There are also various logging tools that integrate natively with Kubernetes to make the task easier.  <br/>
-* To be effective in container orchestration using Kubernetes - a good knowledge of Linux is required. Without Linux its difficult to go far. Below are some articles to start with.  
+* To be effective in container orchestration using Kubernetes - a good knowledge of Linux is required because it all starts from there. Without Linux its difficult to go far. The good news is that there are lot of free courses to scale up in Linux. Below are some video courses & articles to master it.
+    * [Linux crash Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW) <br/>
+    * [Bash scripting on Linux](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w) <br/>
+    * [Bash Scripting for Beginners](https://www.youtube.com/playlist?list=PLKMOdY6Bhga5fmUcQQwhfL9thR_Yp1hZ7) <br/>  
     * [Linux Crash Course - Data Streams (stdin, stdout & stderr)](https://www.youtube.com/watch?v=zMKacHGuIHI) : Handling Input/output /error redirections. This is most important concept to know in Kubernetes logging & debugging<br/>
     * [Learning Path: Kubernetes](https://developer.ibm.com/tutorials/linux-basics-and-commands/)<br/>
     * [Learning Kubernetes](https://developer.ibm.com/series/kubernetes-learning-path/)<br/>
