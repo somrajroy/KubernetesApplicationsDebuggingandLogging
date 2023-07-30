@@ -1,4 +1,5 @@
 # [work in progress] Kubernetes Applications - Logging, Debugging & Troubleshooting.
+## Introduction
 This open source blog is intended to be a one stop shop for Kubernetes application debugging and logging purposes. This can also serve as template to be followed in Kubernetes implementations as it contains inductry standard approaches and guidelines.<br/> 
 This blog will help to effectively debug and analyze kubernetes applications to make things easy for architects/developers to orchestrate containers by Kubernetes. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky.<br/><br/>
 The popularity of Kubernetes and its ecosystem grows like a snowball rolling down Mount Everest. Kubernetes is a very complex ecosystem. It is highly distribuuted and dynamic. The nodes/pods/containers can be terminated, restarted, or rescheduled at any point in time. This transient and dynamic nature of the system is a challenge in itself. <br/>
