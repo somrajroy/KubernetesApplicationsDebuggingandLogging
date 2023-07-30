@@ -29,6 +29,11 @@ However to be effective in container orchestration using Kubernetes - a good kno
 # Importance of Logging and Debugging
 At the core of every successful Kubernetes deployment lies a robust logging strategy. Application logs are not mere strings of text; they hold the key to unlocking valuable insights into system behavior, performance bottlenecks, and potential security vulnerabilities. By capturing structured logs, developers and architects can effectively monitor, troubleshoot, and optimize applications running on Kubernetes clusters.<br/><br/>
 But logging is just one part of the equation. In the dynamic, transient and distributed world of Kubernetes, where applications span multiple containers and nodes, the need for rapid debugging is inevitable. Debugging is the process of identifying and fixing issues in a Kubernetes application. It is a critical part of maintaining the health and performance of Kubernetes applications. The highly distributed nature of Kubernetes makes traditional approaches to debugging less applicable. This comprehensive blog with equip architects and developers to effectively deal with Kubernetes applications. <br/>
+# Introduction to Kubernetes Logging
+
+Application logging is a critical aspect of monitoring and troubleshooting applications running in Kubernetes clusters. Proper logging practices enable developers and system administrators to:
+
+
 # Kubernetes Events
 * Kubernetes Events, are in a way, logs in themselces. An event is a Kubernetes resource/object. that occurs when a change happens with another Kubernetes resource/object whether it’s Pods, Services, Nodes, etc. It includes information about errors and changes to resource state. For example, events may include scheduler decisions and reasons for pod deletion.<br/>
 * Events are API objects stored on the API server. By default, Kubernetes drops event data 60 minutes after events are fired, so customers need to have a mechanism for storing event data in a persistent location.<br/>
