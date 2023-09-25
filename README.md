@@ -11,7 +11,6 @@ However to be effective in container orchestration using Kubernetes - a good kno
     * [Bash scripting on Linux](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w) <br/>
     * [Bash Scripting for Beginners](https://www.youtube.com/playlist?list=PLKMOdY6Bhga5fmUcQQwhfL9thR_Yp1hZ7) <br/>
     * [Learn Linux Bash for Free](https://www.youtube.com/playlist?list=PLlrxD0HtieHh9ZhrnEbZKhzk0cetzuX7l)<br/>
-    * [Bash Scripting Examples](https://www.youtube.com/watch?v=q2z-MRoNbgM)<br/>
     * [Linux Crash Course - Data Streams (stdin, stdout & stderr)](https://www.youtube.com/watch?v=zMKacHGuIHI) : Handling Input/output /error redirections. This is most important concept to know in Kubernetes logging & debugging<br/>
     * [Learning Path: Kubernetes](https://developer.ibm.com/tutorials/linux-basics-and-commands/)<br/>
     * [Learning Kubernetes](https://developer.ibm.com/series/kubernetes-learning-path/)<br/>
@@ -51,3 +50,4 @@ Application logging is a critical aspect of monitoring and troubleshooting appli
 Below are some additional resources and references for further learning:<br/>
 
 1. [Kubernetes logging best practices](https://www.cncf.io/blog/2023/07/03/kubernetes-logging-best-practices/#:~:text=This%20data%20includes%20information%20about,monitor%20and%20maintain%20application%20health.)<br/>
+2. [Bash Scripting Examples](https://www.youtube.com/watch?v=q2z-MRoNbgM)<br/>
