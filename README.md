@@ -64,7 +64,7 @@ Application logs in Kubernetes are crucial for diagnosing issues, monitoring app
 * `kubectl get events`: Lists all events in the current namespace.<br/>
 * `kubectl get events --all-namespaces`: List events across all namespaces.<br/>
 * `kubectl describe event <event_name>`: View detailed information about a specific event.<br/>
-* `kubectl events --for pod/web-pod-13je7 --watch` : To filter events for a specific pod and watch for new events <br/>
+* `kubectl -n abc-namespace events --for pod/web-pod-13je7 --watch` : To filter events for a specific pod and watch for new events <br/>
 * `--watch` : Stream events as they occur in real-time <br/>
 * `--field-selector=<key>=<value>`: Filter by specific fields (e.g., `--field-selector involvedObject.kind=Pod`).<br/>
 * `--sort`: Sort events by different criteria (e.g., `--sort=-lastTimestamp`).<br/>
