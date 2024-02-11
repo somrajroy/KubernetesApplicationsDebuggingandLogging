@@ -46,13 +46,17 @@ Application logging is a critical aspect of monitoring and troubleshooting appli
 1. Normal: Indicate successful operations like pod creation, container starting, or node becoming ready. These events represent normal and expected behavior. <br/>
 2. Warning: Notify of potential issues, such as low disk space, pod evictions,a pod failing to start, a resource running out of resources, or container restarts exceeding a threshold. These indicate potential issues or warnings. <br/>
 3. Error: Error: These events signify errors or problems that need attention. Examples include a pod crashing or a resource entering a failed state. These signify errors or problems that need attention. <br/>
+4. Volume events, node events etc - please check the references <br/>
 
 ## Purpose and Utilization <br/> 
+* Kubectl events are records of the state changes within a Kubernetes cluster. They provide valuable information about the activities and status of resources in the cluster. The purpose of kubectl events is to help administrators and developers monitor the health and performance of their applications running in Kubernetes.<br/>
+* To utilize events in Kubernetes leverage `kubectl` which provides a unified way to manage and access the kubernetes cluster. `kubectl events` is a command-line tool in Kubernetes that helps monitor and diagnose cluster health by displaying events associated with various cluster objects (pods, deployments, nodes, etc.). These events provide details about resource creation, updates, errors, and warnings, giving valuable insights into the cluster's state and activity. <br/>
 * The purpose of kubectl events is to provide a real-time stream of events associated with different objects in the cluster. These events can include information about resource creation, deletion, errors, warnings, and other changes. By examining events, one can gain visibility into what is happening within the cluster and identify potential issues or unexpected behavior. hey offer valuable insights into the health and performance of the cluster, aiding in monitoring, troubleshooting, and understanding overall cluster activity. These events are a form of metadata related to the pods, jobs, nodes, and other kubernetes resources. They capture various activities and document the changes that occur inside the cluster. Viewing stored events can explain problems and help resolve failures.<br/>
 * Kubernetes Events, are in a way, logs in themselves. An event is a Kubernetes resource/object. that occurs when a change happens with another Kubernetes resource/object whether it’s Pods, Services, Nodes, etc. It includes information about errors and changes to resource state. For example, events may include scheduler decisions and reasons for pod deletion.<br/>
 * Events are API objects stored on the API server. By default, Kubernetes drops event data 60 minutes after events are fired, so customers need to have a mechanism for storing event data in a persistent location.<br/>
 
 ## kubectl commands <br/>
+* `kubectl events` is primarily a monitoring and diagnostics tool. It leverages events emitted by Kubernetes objects (not custom components) to provide insights into cluster activity <br/>
 * `kubectl get events`: Lists all events in the current namespace.<br/>
 * `kubectl get events --all-namespaces`: List events across all namespaces.<br/>
 * `kubectl describe event <event_name>`: View detailed information about a specific event.<br/>
@@ -62,6 +66,18 @@ Application logging is a critical aspect of monitoring and troubleshooting appli
 * `--sort`: Sort events by different criteria (e.g., `--sort=-lastTimestamp`).<br/>
 * `--output=<format>`: Specify output format (e.g., `--output=json`)<br/>
 * List only events of type ‘Warning’ or ‘Normal’: `kubectl events --types=Warning,Normal`<br/>
+* `kubectl get events --field-selector type=Warning` : filter events based on types to focus on specific aspects of the cluster <br/>
+* `kubectl events -o yaml` : List recent events in YAML format <br/>
+
+### Further tips to effectively utilize events <br/>
+* Use namespaces to organize events for large clusters or if there are multiple applications and different clusters. I had this in my last project and ensured that customer has different clusters. Consider creating separate namespaces for different environments (e.g., development, staging, production). Namespace isolation ensures that events are neatly categorized and don’t overlap. Organizing events with namespaces is a crucial point for clarity and managing large clusters. <br/>
+* Combine kubectl events with other tools like `kubectl describe`, `kubectl logs`, and `kubectl get` for deeper troubleshooting. <br/>
+* Leverage monitoring tools that aggregate and analyze events for broader cluster inights. <br/>
+* By effectively utilizing kubectl events, one can gain valuable insights into Kubernetes cluster's health, troubleshoot issues faster, and ensure the smooth operation of applications. <br/>
+* Set up RBAC (Role-Based Access Control) for Event Monitoring : Ensure that access to `kubectl events` and other related commands is restricted based on the principle of least privilege. Set up RBAC rules to control who can access event information, helping to maintain security and prevent unauthorized access to critical cluster data. Security considerations and RBAC setup adds a significant dimension. <br/>
+* Use Labels and Annotations for Enhanced Event Context & enriching events with labels/annotations: When creating resources in Kubernetes, consider using labels and annotations to add additional context to events. This will make it easier to filter and understand events related to specific applications, environments, or other custom criteria, providing more detailed insights. <br/>
+* Tailing events for real-time updates: Execute `--watch` for continuous monitoring. <br/>
+* Filtering by severity: Highlighting filtering by severity (`--field-selector=level=Warning`) could aid troubleshooting.
 
 ## Links/Guide to Kubernetes Events <br/> 
 
