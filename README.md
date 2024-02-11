@@ -46,6 +46,20 @@ Application logging is a critical aspect of monitoring and troubleshooting appli
 * The purpose of kubectl events is to provide a real-time stream of events associated with different objects in the cluster. These events can include information about resource creation, deletion, errors, warnings, and other changes. By examining events, one can gain visibility into what is happening within the cluster and identify potential issues or unexpected behavior. hey offer valuable insights into the health and performance of the cluster, aiding in monitoring, troubleshooting, and understanding overall cluster activity. These events are a form of metadata related to the pods, jobs, nodes, and other kubernetes resources. They capture various activities and document the changes that occur inside the cluster. Viewing stored events can explain problems and help resolve failures.<br/>
 * Kubernetes Events, are in a way, logs in themselves. An event is a Kubernetes resource/object. that occurs when a change happens with another Kubernetes resource/object whether it’s Pods, Services, Nodes, etc. It includes information about errors and changes to resource state. For example, events may include scheduler decisions and reasons for pod deletion.<br/>
 * Events are API objects stored on the API server. By default, Kubernetes drops event data 60 minutes after events are fired, so customers need to have a mechanism for storing event data in a persistent location.<br/>
+
+## Links/Guide to Kubernetes Events <br/> 
+
+Below are some resources and references to learn more about events : <br/>
+
+1. [How to Use Kubectl Get Events - A Complete Guide](https://humalect.com/blog/kubectl-get-events)<br/>
+2. [Types of Kubernetes Events](https://www.bluematador.com/blog/kubernetes-events-explained)<br/>
+3. [Understanding Kubernetes Events: A Guide](https://www.kosli.com/blog/understanding-kubernetes-events-a-guide/)<br/>
+4. [How to Watch Kubernetes Events](https://thechief.io/c/editorial/how-watch-kubernetes-events/)<br/>
+5. [Kubernetes events for troubleshooting](https://learn.microsoft.com/en-us/azure/aks/events?tabs=azure-cli)<br/>
+6. [Events : Official Documentation](https://kubernetes.io/docs/reference/kubernetes-api/cluster-resources/event-v1/)<br/>
+7. [A complete guide to Kubernetes events](https://www.airplane.dev/blog/kubernetes-events)<br/>
+8. [How to use Kubernetes events for effective alerting and monitoring](https://www.cncf.io/blog/2023/03/13/how-to-use-kubernetes-events-for-effective-alerting-and-monitoring/)<br/>
+
 # Kubectl "exec"
 * [The kubectl exec command](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) allows to start a shell session inside containers running in Kubernetes cluster. This command allows to inspect the container’s file system, check the state of the environment, and perform advanced debugging tools when logs alone don’t provide enough information.<br/>
 * "kubectl exec" lets developers specify the container to connect to without worrying about the Kubernetes node it’s on. This is the biggest strength as there is no need to know the node IP (details). (With SSH node details are needed)<br/>
