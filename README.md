@@ -124,15 +124,11 @@ Kubernetes operates at multiple levels, with each generating logs that offer dis
 * `kubectl logs [pod-name] -c [container-name]` : Get logs from a specific container in a pod. Is useful when a pod has multiple containers and developers need logs from a specific one <br/>
 * `kubectl logs [pod-name] --all-containers=true` : Get logs for all containers in a pod.<br/>
 * `kubectl logs [pod-name] --previous` or `kubectl logs -p [pod-name]`: Get logs for a pod that has completed or failed. The `--previous` flag allows to view the logs of a pod's previous instance, which is 
-   useful for understanding the behavior of completed or failed jobs.<br/>
+   useful for understanding the behavior of completed or failed jobs or why a restart occurred.<br/>
 * `kubectl logs [pod-name] | grep "search-expression"` : Filter logs using grep. This command pipes the output of kubectl logs into grep to filter for specific log entries. For e.g. `kubectl logs my-app-pod | grep "ERROR"`<br/>
-
-
-
-
- 
-
-
+* `kubectl logs -l app=my-app` : Aggregate Logs for a Set of Pods. Using label selectors, one can aggregate logs for a specific set of pods, useful for getting an overview of a service or application. <br/>
+* `kubectl logs my-app-pod > my-app-logs.txt` : Exporting Logs for Analysis. For deeper analysis, one might want to export logs to a file or an external analysis tool. <br/>
+* Please refer to the [Kubernetes log documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) to learn more about different flags that can be used.
 
 # Kubectl "exec"
 * [The kubectl exec command](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) allows to start a shell session inside containers running in Kubernetes cluster. This command allows to inspect the container’s file system, check the state of the environment, and perform advanced debugging tools when logs alone don’t provide enough information.<br/>
