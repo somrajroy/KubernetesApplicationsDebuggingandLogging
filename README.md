@@ -118,7 +118,7 @@ Kubernetes operates at multiple levels, with each generating logs that offer dis
 * `kubectl logs <pod_name>`: Retrieve logs from all Containers in a Pod. Without specifying a container, this command fetches logs from all containers within the specified pod. Useful when investigating interactions between multiple containers in a pod. <br/>
 * `kubectl logs --follow` & `kubectl logs -f <pod-name>` : Continuously tail the logs for real-time updates. The `-f` or `--follow` flag streams the logs in real-time. Useful for monitoring ongoing activities 
    and changes. <br/>
-* `kubectl logs <pod-name> --since=[duration]`: Filter logs based on a specific time period (i.e. fetch logs generated after a specified timestamp.e.g., 5s, 2m, or 3h) . For example `kubectl logs --since=1h <pod-name>`. <br/>
+* `kubectl logs <pod-name> --since=[duration]`: Filter logs based on a specific time period (i.e. fetch logs generated after a specified timestamp.e.g., 5s, 2m, or 3h) . For example `kubectl logs --since=1h <pod-name>` or `kubectl logs --since=15m <podName>` (last 15 mins). <br/>
 * `kubectl logs <pod-name> --tail=<number>`: View the last 100 lines of logs for quick insights (adjust the number as needed). `<number>` specifies the number of lines to show. <br/>
 * `kubectl logs <pod-name> --timestamps` : Include timestamps in the log output and provides a chronological view of events. <br/>
 * `kubectl logs [pod-name] -c [container-name]` : Get logs from a specific container in a pod. Is useful when a pod has multiple containers and developers need logs from a specific one <br/>
