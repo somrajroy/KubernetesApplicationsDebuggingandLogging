@@ -1,4 +1,4 @@
-# [work in progress] Kubernetes Applications - Logging, Debugging & Troubleshooting.
+# [work in progress] Kubernetes Application Logging, Debugging & Troubleshooting.
 ## Introduction
 Welcome to the one-stop resource — the definitive guide to Kubernetes application logging and debugging. Whether you are a seasoned Kubernetes expert or just starting your journey into containerization, this comprehensive blog will equip you with the knowledge and tools to master the art of logging and debugging in Kubernetes. <br/><br/>
 In the world of modern application development, Kubernetes has emerged as the de facto container orchestration platform, offering unparalleled scalability and flexibility. As developers and architects delve deeper into the Kubernetes ecosystem, the need for robust application logging and efficient debugging becomes increasingly evident. This open source blog is intended to be a one stop shop for Kubernetes application debugging and logging purposes. This can also serve as guideline to be followed in Kubernetes implementations as it contains industry standard approaches and best practices.<br/> 
