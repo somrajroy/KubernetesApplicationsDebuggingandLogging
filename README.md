@@ -90,7 +90,7 @@ Below are some resources and references to learn more about events : <br/>
 7. [A complete guide to Kubernetes events](https://www.airplane.dev/blog/kubernetes-events)<br/>
 8. [How to use Kubernetes events for effective alerting and monitoring](https://www.cncf.io/blog/2023/03/13/how-to-use-kubernetes-events-for-effective-alerting-and-monitoring/)<br/>
 9. [How to Use Kubectl Get Events](https://www.learnitguide.net/2023/04/how-to-use-kubectl-get-events.html)<br/>
-
+# Read/view logs with kubectl
 # Kubectl "exec"
 * [The kubectl exec command](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) allows to start a shell session inside containers running in Kubernetes cluster. This command allows to inspect the container’s file system, check the state of the environment, and perform advanced debugging tools when logs alone don’t provide enough information.<br/>
 * "kubectl exec" lets developers specify the container to connect to without worrying about the Kubernetes node it’s on. This is the biggest strength as there is no need to know the node IP (details). (With SSH node details are needed)<br/>
