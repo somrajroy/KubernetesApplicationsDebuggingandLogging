@@ -244,3 +244,5 @@ Below are some additional resources and references for further learning:<br/>
 4. [What are Container Runtimes & 3 Types of Container Runtimes](https://humalect.com/blog/container-runtimes)<br/>
 5. [Kubectl Exec: How to Execute Shell Commands Into a Container (With Examples)](https://kodekloud.com/blog/kubectl-exec/)<br/>
 6. [kubectl logs: How to Get Pod Logs in Kubernetes (With Examples)](https://kodekloud.com/blog/kubectl-logs/)<br/>
+7. [A Practical Guide to Kubernetes Logging](https://logz.io/blog/a-practical-guide-to-kubernetes-logging/)<br/>
+8. [Monitoring, Logging, and Debugging](https://kubernetes.io/docs/tasks/debug/)<br/>
