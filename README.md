@@ -216,3 +216,5 @@ Below are some additional resources and references for further learning:<br/>
 2. [Bash Scripting Examples](https://www.youtube.com/watch?v=q2z-MRoNbgM)<br/>
 3. [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)<br/>
 4. [What are Container Runtimes & 3 Types of Container Runtimes](https://humalect.com/blog/container-runtimes)<br/>
+5. [Kubectl Exec: How to Execute Shell Commands Into a Container (With Examples)](https://kodekloud.com/blog/kubectl-exec/)<br/>
+6. [kubectl logs: How to Get Pod Logs in Kubernetes (With Examples)](https://kodekloud.com/blog/kubectl-logs/)<br/>
