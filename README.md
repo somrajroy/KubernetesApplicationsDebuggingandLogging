@@ -166,8 +166,18 @@ Kubernetes operates at multiple levels, with each generating logs that offer dis
 *   Below is the format of exec command. One can use `-i` and `-t` flags with it. These two flags combined (`-it`) allows to execute commands inside the container but from  own local terminal. This means if someone running something like `ls` s/he will see the files in the container and not on his/her system where the terminal is actually running. In below command `sh` can also be used instead of `bash`. <br/>
         * `kubectl exec -it <POD_NAME> -n <NAME_SPACE>  -- bash` <br/>
 ### Key commands <br/>
-* `kubectl -n [namespace] exec -it [pod-name] -- /bin/sh` : Executing a command in a container with a namespace. This command specifies the namespace of the pod and opens a shell session in the container.
-* `kubectl exec` requires the container name, even if the pod only has one container. If the container does not have a shell, then we may need to use a different command to access it, such as `kubectl exec [pod-name] -- cat /proc/1/mounts` <br/>
+* `kubectl -n [namespace] exec -it [pod-name] -- /bin/sh` or (`kubectl exec -it <pod-name> -- /bin/bash`): Executing a command in a container with a namespace. This command specifies the namespace of the pod and 
+   opens a shell session in the container. `-it`: Provides an interactive terminal. <br/>
+* `kubectl exec -it [pod-name] -- bash -c "command1; command2; command3` : Executing a multi-command sequence in a container. This command allows to execute multiple commands in sequence within the 
+   container's shell. <br/>
+* `kubectl exec` requires the container name, even if the pod only has one container. If the container does not have a shell, then we may need to use a different command to access it, such as `kubectl exec [pod- 
+   name] -- cat /proc/1/mounts` <br/>
+* `kubectl exec -it <pod-name> -c <container-name> -- <command>` : Run a Command in a Specific Container.<br/>
+* `kubectl exec <pod-name> -- <command>` : Execute a Single Command in a Container. <br/>
+* `kubectl exec -it <pod-name> -- /bin/bash -c "while true; do echo hello; sleep 10; done"` : Run a Command and Keep it Running. `/bin/bash -c "while true; do echo hello; sleep 10; done"`: Command that runs 
+   continuously.<br/>
+
+
 
 # Application Logging - stdout & stdin
 In all container-based applications (not just kubernetes) it is best practice to direct application logs to stdout/stderr  standard output streams. Kubernetes natively captures and manages these streams, making log collection and aggregation straightforward. There is no worry about losing these logs, as kubelet, Kubernetes’ node agent, will collect these streams and write them to a local file behind the scenes, so that it can be accessed with Kubernetes.<br/>
