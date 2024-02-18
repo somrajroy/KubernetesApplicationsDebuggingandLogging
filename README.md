@@ -13,7 +13,7 @@ This blog will help to effectively debug and analyze kubernetes applications to 
     * [Learning Kubernetes](https://developer.ibm.com/series/kubernetes-learning-path/)<br/>
     * [Learn Linux, 101: A roadmap for LPIC-1](https://developer.ibm.com/tutorials/l-lpic1-map/)<br/>
 * Additionally one should also get comfortable with containerization concepts and tools like Docker to work in Kubernetes. Containers are the building blocks of Kubernetes, so knowing about Docker is essential.  [This YouTube course is very good & can be considered.](https://www.youtube.com/watch?v=RqTEHSBrYFw)<br/>
-* Below are the official Kubernetes links which would aid in troubleshooting.
+* Below are the official Kubernetes links which would aid in troubleshooting. You would need the concepts in rest of the blog. <br/>
    * [Kubernetes Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/)<br/>
    * [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)<br/>
    * [Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/)<br/>
