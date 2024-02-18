@@ -25,9 +25,6 @@ This blog will help to effectively debug and analyze kubernetes applications to 
 
 <img width="357" alt="image" src="https://github.com/somrajroy/KubernetesApplicationsDebuggingandLogging/assets/92582005/bd34b89a-4653-46ea-92a4-2563c4e8c633"> <br/>
 
-
-* Kubernetes is challenging because of it's ephemeral and dynamic nature. One of the main challenges is how to centralize Kubernetes logs. Additionally, machines in the Cloud are ephemeral. As more companies run their services on containers and orchestrate deployments with Kubernetes, logs can no longer be stored on machines and implementing a log management strategy is important. Logs are an effective way of debugging and monitoring applications, and they need to be stored on a separate backend where they can be queried and analyzed. These separate backends include systems like Elasticsearch, GCP’s Stackdriver, and AWS’ Cloudwatch.  <br/>
-* In Kubernetes, when pods are evicted, crashed, deleted, or scheduled on a different node, the logs from the containers are gone. The system cleans up after itself. Therefore DevOps engineers lose any information about why the issue/anomaly occurred. This transient nature makes it crucial to implement a centralized log management solution. This blog does not talk about storing logs but focuses more on reading/viewing application logs which can be leveraged to fix problems. <br/>
 # Types of Logs
 In Kubernetes, various types of logs provide insights into different aspects of the cluster and application lifecycle. Understanding logs holds the key to unlocking the health and behavior of applications & clusters. While seemingly simple, Kubernetes offers different types of logs, each with a unique purpose and utility.<br/>
 
