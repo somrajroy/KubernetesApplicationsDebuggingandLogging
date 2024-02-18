@@ -167,18 +167,31 @@ Kubernetes operates at multiple levels, with each generating logs that offer dis
         * `kubectl exec -it <POD_NAME> -n <NAME_SPACE>  -- bash` <br/>
 ### Key commands <br/>
 * `kubectl -n [namespace] exec -it [pod-name] -- /bin/sh` or (`kubectl exec -it <pod-name> -- /bin/bash`): Executing a command in a container with a namespace. This command specifies the namespace of the pod and 
-   opens a shell session in the container. `-it`: Provides an interactive terminal. <br/>
+   opens a shell session in the container for live troubleshooting. `-it`: Provides an interactive terminal. <br/>
 * `kubectl exec -it [pod-name] -- bash -c "command1; command2; command3` : Executing a multi-command sequence in a container. This command allows to execute multiple commands in sequence within the 
    container's shell. <br/>
 * `kubectl exec` requires the container name, even if the pod only has one container. If the container does not have a shell, then we may need to use a different command to access it, such as `kubectl exec [pod- 
    name] -- cat /proc/1/mounts` <br/>
+* `kubectl exec [pod-name] -- ls /` : Running a command in a container. This command lists the contents of the root directory in the specified pod. <br/>
+* `kubectl exec [pod-name] -c [container-name] -- ls /` : Executing a command in a container with a specific name. The `-c` or `--container` flag specifies the container within the pod where the command should 
+   be executed. <br/>
+* `kubectl exec [pod-name] -- sleep  5000` : Running a command in a container and then exiting. This example runs a sleep command in the container and then exits, which can be useful for testing or observing the 
+   container's behavior. <br/>
 * `kubectl exec -it <pod-name> -c <container-name> -- <command>` : Run a Command in a Specific Container.<br/>
 * `kubectl exec <pod-name> -- <command>` : Execute a Single Command in a Container. <br/>
 * `kubectl exec -it <pod-name> -- /bin/bash -c "while true; do echo hello; sleep 10; done"` : Run a Command and Keep it Running. `/bin/bash -c "while true; do echo hello; sleep 10; done"`: Command that runs 
    continuously.<br/>
-
-
-
+* `kubectl exec <pod-name> -c <container-name> --previous -- <command>` : Execute a Command in a Previous Container Instance.
+* `kubectl exec <pod-name> -- env VAR_NAME=value command-to-execute` : Set Environment Variables in the Command. `env VAR_NAME=value`: Set environment variables for the command. <br/>
+* `kubectl exec <pod_name> -- cat /var/log/myapp.log` :  Views application logs directly within the container. <br/>
+* `kubectl exec -i -t <pod_name> -- sh -c "tail -f /var/log/nginx/access.log` : Advanced debugging. Opens an interactive shell and tails the Nginx access log in real-time. <br/>
+* `kubectl exec <pod_name> -- ls -la /usr/local/bin` : Lists files and directories within a specific path for configuration inspection. <br/>
+* `kubectl exec <pod_name> -- sed -i "s/old_value/new_value/" /etc/myapp.conf` : Modifies a configuration file directly within the container. To be used cautiously. <br/>
+* `kubectl exec <pod_name> -- echo "NEW_ENV_VAR=value" >> /etc/environment` : Adds a new environment variable to the container's environment. <br/>
+* `kubectl exec <pod_name> -- df -h` : Examine disk usage on the container's filesystem. <br/>
+* `kubectl exec <pod_name> -- netstat -ap | grep ESTABLISHED` : Checks active network connections within the container. <br/>
+* `kubectl exec <pod_name> -- ping 8.8.8.8` : Checks network connectivity from within the container. <br/>
+* `kubectl exec <pod_name> -- /bin/bash` : Opens a shell session within the container's main process for live troubleshooting. <br/>
 # Application Logging - stdout & stdin
 In all container-based applications (not just kubernetes) it is best practice to direct application logs to stdout/stderr  standard output streams. Kubernetes natively captures and manages these streams, making log collection and aggregation straightforward. There is no worry about losing these logs, as kubelet, Kubernetes’ node agent, will collect these streams and write them to a local file behind the scenes, so that it can be accessed with Kubernetes.<br/>
 Directing application logs to stdout/stderr is considered a best practice in containerized environments like Kubernetes and when using orchestration tools. Below are the reasons why this practice is recommended.<br/>
