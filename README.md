@@ -67,7 +67,7 @@ Application logs in Kubernetes are crucial for diagnosing issues, monitoring app
 * `kubectl get events --field-selector type=Warning` : filter events based on types to focus on specific aspects of the cluster <br/>
 * `kubectl events -o yaml` : List recent events in YAML format <br/>
 
-### Further tips to effectively utilize events <br/>
+### Tips/tricks to effectively utilize events <br/>
 * Use namespaces to organize events for large clusters or if there are multiple applications and different clusters. I had this in my last project and ensured that customer has different clusters. Consider creating separate namespaces for different environments (e.g., development, staging, production). Namespace isolation ensures that events are neatly categorized and don’t overlap. Organizing events with namespaces is a crucial point for clarity and managing large clusters. <br/>
 * Combine kubectl events with other tools like `kubectl describe`, `kubectl logs`, and `kubectl get` for deeper troubleshooting. <br/>
 * Leverage monitoring tools that aggregate and analyze events for broader cluster inights. <br/>
@@ -130,6 +130,31 @@ Kubernetes operates at multiple levels, with each generating logs that offer dis
 * `kubectl logs my-app-pod > my-app-logs.txt` : Exporting Logs for Analysis. For deeper analysis, one might want to export logs to a file or an external analysis tool. <br/>
 * Please refer to the [Kubernetes log documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) to learn more about different flags that can be used.<br/>
 
+## Tips/tricks to effectively utilize events <br/>
+* Organize Logs with Namespaces: Use namespaces to separate logs for different environments or applications. <br/>
+* Structured Logging & Custom Formatting for Logs : Using structured logging formats like JSON can make it easier to search, filter, and analyze log data. Consider configuring the applications to log messages in 
+  a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated log analysis tools, improving overall log readability and searchability. <br/>
+* Use labels and selectors to filter logs: Kubernetes allows to label pods and use selectors to filter logs from specific pods or containers. This can be helpful when there are a large number of pods and 
+  customers/developers want to focus on specific ones. Using label selectors with kubectl logs can help aggregate logs from pods with specific labels, which is useful for monitoring applications across multiple 
+  pods. This can also help manage the logging directory structure and prevent logs from taking up too much disk space. It involves archiving or deleting old logs. <br/>
+* Logging Levels: Including different log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) can help categorize log messages based on their severity, which is useful during troubleshooting and debugging. <br/>
+* Log Rotation and Retention Policies: Consider configuring the applications to log messages in a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated 
+  log analysis tools, improving overall log readability and searchability. <br/>
+* Time-Based Log Retrieval: Utilizing flags like `--since`, `--since-time`, and `--previous` can help retrieve logs based on time or the previous instance of a container, which is useful for troubleshooting 
+  recent issues <br/>
+* Sensitive Information: It's important to avoid logging sensitive information. Use environment variables or secrets to store such data securely. <br/>
+* Contextual Information: Including timestamps, hostnames, and request IDs in logs can help in correlating log events and troubleshooting issues. <br/>
+* Monitor Resource Usage : Track resource usage when retrieving logs, especially in production environments. Fetching extensive logs from multiple containers may impact the performance of the cluster. Customers 
+  should be mindful of the resources consumed by log retrieval operations. <br/>
+* Log Streaming (Aggregate and Analyze): Streaming logs to a centralized log server or log management system is recommended for efficient searching, analysis, and long-term retention of logs. Leverage tools like 
+  FluentbIT or ELK to collect and analyze logs from various sources. <BR/>
+* Integrate with Monitoring and Alerting Systems : Integrate logs with monitoring and alerting systems. This allows to set up alerts based on specific log events or patterns, enabling proactive issue detection 
+  and rapid response to critical incidents. <br/>
+* Filter and Search: Use tools like grep or dedicated log viewers for filtering and searching through large log volumes. <br/>
+* Set Up Logging Drivers: Configure logging drivers for structured log formats and easier parsing. <br/>
+* Control Plane Logs: Tailing the logs of Kubernetes control plane components like the API server, controller manager, scheduler, and etcd can provide insights into the cluster's behavior. This maynot be 
+  required for serverless services (e.g. AWS EKS Fargate).  <br/>
+
 # Kubectl "exec"
 * [The kubectl exec command](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/) allows to start a shell session inside containers running in Kubernetes cluster (i.e. interact with running conatiners & execute commands in container(s) within a pod). This command allows to inspect the container’s file system, check the state of the environment, and perform advanced debugging tools when logs alone don’t provide enough information. It is essential for interacting with the containers, performing tasks such as debugging, modifying files, or checking the environment of the container.<br/>
 * `kubectl exec` lets developers specify the container to connect to without worrying about the Kubernetes node it’s on. This is the biggest strength as there is no need to know the node IP (details). (With SSH node details are needed). This command works by establishing a connection to the container's standard input, output, and error streams, enabling the user to interact with the container's processes.<br/>
@@ -158,7 +183,7 @@ In summary - Directing application logs to stdout/stderr is a widely accepted be
 
 Below are some additional resources and references for further learning:<br/>
 
-1. [Kubernetes logging best practices](https://www.cncf.io/blog/2023/07/03/kubernetes-logging-best-practices/#:~:text=This%20data%20includes%20information%20about,monitor%20and%20maintain%20application%20health.)<br/>
+1. [Kubernetes logging best practices](https://www.cncf.io/blog/2023/07/03/kubernetes-logging-best-practices/)<br/>
 2. [Bash Scripting Examples](https://www.youtube.com/watch?v=q2z-MRoNbgM)<br/>
 3. [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)<br/>
 4. [What are Container Runtimes & 3 Types of Container Runtimes](https://humalect.com/blog/container-runtimes)<br/>
