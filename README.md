@@ -246,3 +246,5 @@ Below are some additional resources and references for further learning:<br/>
 6. [kubectl logs: How to Get Pod Logs in Kubernetes (With Examples)](https://kodekloud.com/blog/kubectl-logs/)<br/>
 7. [A Practical Guide to Kubernetes Logging](https://logz.io/blog/a-practical-guide-to-kubernetes-logging/)<br/>
 8. [Monitoring, Logging, and Debugging](https://kubernetes.io/docs/tasks/debug/)<br/>
+9. [Docker Containers and Kubernetes Fundamentals – Full Hands-On Course](https://www.youtube.com/watch?v=kTp5xUtcalw&t=14s)<br/>
+10. [Docker Tutorial for Beginners [FULL COURSE in 3 Hours]](https://www.youtube.com/watch?v=3c-iBn73dDE)<br/>
