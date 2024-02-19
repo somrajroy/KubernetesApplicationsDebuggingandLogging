@@ -7,10 +7,10 @@ This blog will help to effectively debug and analyze kubernetes applications to 
 # Why master Kubernetes logging?
 Below are the crucial benefits if anyone masters the techniques, strategies and industry practices mentioned in this blog (most of which I have applied).
 
+* `Boost debugging efficiency`: Leverage targeted techniques for effective troubleshooting mentioned in this actionable guide. <br/>
 * `Pinpoint issues rapidly & Bottleneck identification`: Logs expose performance bottlenecks or resource constraints affecting application's operation. By analyzing log data, customers can pinpoint bottlenecks and take steps to optimize application's performance. They help to diagnose problems quicker and with more precision. <br/>
 * `Informed decision-making`: Through log analysis, architects/customers gain a deeper understanding of application's behavior and its interaction with the underlying infrastructure. This knowledge can empower customers to make informed decisions about future optimizations, resource allocation, and configuration changes.<br/>
 * `Gain deeper application insights`: Understand how applications behave, optimize performance, and ensure smooth operation. <br/>
-* `Boost debugging efficiency`: Leverage targeted techniques for effective troubleshooting mentioned in this actionable guide. <br/>
 
 # Linux and Docker
 To be effective in container orchestration using Kubernetes - a good knowledge of Linux & Docker is required because it all starts from there. Without Linux its difficult to go far. Don't worry - learning curves hold you back! I've curated a set of free, high-quality resources to jumpstart your Linux and Docker skills. Below are the video courses & articles to master them.<br/>
