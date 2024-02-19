@@ -1,13 +1,13 @@
 # [work in progress] A practical guide to debugging/troubleshooting kubernetes applications - Mastering Logs, Events, best industry practices and kubectl for Seamless Debugging and Insights.
 ## Introduction
-Welcome to my in-depth exploration of Kubernetes application logging. This guide will equip you with the techniques and industry best practices to demystify the inner workings of kubernetes applications.<br/>
+Welcome to my in-depth exploration of Kubernetes application logging. This guide will equip you with the battle-tested techniques, commands and industry best practices to demystify the inner workings of kubernetes applications.<br/>
 
 This blog will help to effectively debug and analyze kubernetes applications to make things easy for architects/developers to orchestrate containers by Kubernetes. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky but very important. I have applied these techniques/strategies and industry best practices to troubleshoot critical issues resulting in faster resolution times. You will get all the Kubernetes logging & debugging essentials right here and can fix critical Kubernetes issues much faster now with this actionable guide. <br/>
 
 # Why master Kubernetes logging?
 Below are the crucial benefits if anyone masters the techniques, strategies and industry practices mentioned in this blog (most of which I have applied).
 
-* `Boost debugging efficiency`: Leverage targeted techniques for effective troubleshooting mentioned in this actionable guide. <br/>
+* `Boost debugging efficiency`: Leverage targeted techniques for effective troubleshooting mentioned in this actionable guide. For developers this blog is a debugging goldmine. <br/>
 * `Pinpoint issues rapidly & Bottleneck identification`: Logs expose performance bottlenecks or resource constraints affecting application's operation. By analyzing log data, customers can pinpoint bottlenecks and take steps to optimize application's performance. They help to diagnose problems quicker and with more precision. <br/>
 * `Informed decision-making`: Through log analysis, architects/customers gain a deeper understanding of application's behavior and its interaction with the underlying infrastructure. This knowledge can empower customers to make informed decisions about future optimizations, resource allocation, and configuration changes.<br/>
 * `Gain deeper application insights`: Understand how applications behave, optimize performance, and ensure smooth operation. <br/>
