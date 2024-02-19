@@ -1,8 +1,16 @@
 # [work in progress] A practical guide to debugging/troubleshooting kubernetes applications - Mastering Logs, Events, best industry practices and kubectl for Seamless Debugging and Insights.
 ## Introduction
-Welcome to my in-depth exploration of Kubernetes application logging. This guide will equip you with the knowledge and tools to demystify the inner workings of kubernetes applications through effective logging and debugging techniques. <br/><br/>
+Welcome to my in-depth exploration of Kubernetes application logging. This guide will equip you with the knowledge and tools to demystify the inner workings of kubernetes applications through effective logging and debugging techniques. <br/>
 
-This blog will help to effectively debug and analyze kubernetes applications to make things easy for architects/developers to orchestrate containers by Kubernetes. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky but very important. I have applied these techniques/strategies and industry best practices to troubleshoot critical issues resulting in faster resolution times.  You will get all the Kubernetes logging & debugging essentials right here and can fix critical Kubernetes issues much faster now with this actionable guide.  Kubernetes debugging and issue resoltion will become effortless. <br/><br/>
+This blog will help to effectively debug and analyze kubernetes applications to make things easy for architects/developers to orchestrate containers by Kubernetes. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky but very important. I have applied these techniques/strategies and industry best practices to troubleshoot critical issues resulting in faster resolution times.  You will get all the Kubernetes logging & debugging essentials right here and can fix critical Kubernetes issues much faster now with this actionable guide. <br/>
+
+# Why master Kubernetes logging?
+Below are the crucial benefits if anyone masters the techniques, strategies and industry practices mentioned in this blog (most of which I have applied).
+
+* `Pinpoint issues rapidly & Bottleneck identification`: Logs expose performance bottlenecks or resource constraints affecting application's operation. By analyzing log data, customers can pinpoint bottlenecks and take steps to optimize application's performance. They help to diagnose problems quicker and with more precision. <br/>
+* `Informed decision-making`: Through log analysis, architects/customers gain a deeper understanding of application's behavior and its interaction with the underlying infrastructure. This knowledge can empower customers to make informed decisions about future optimizations, resource allocation, and configuration changes.<br/>
+* `Gain deeper application insights`: Understand how applications behave, optimize performance, and ensure smooth operation. <br/>
+* `Boost debugging efficiency`: Leverage targeted techniques for effective troubleshooting mentioned in this actionable guide. <br/>
 
 # Linux and Docker
 To be effective in container orchestration using Kubernetes - a good knowledge of Linux & Docker is required because it all starts from there. Without Linux its difficult to go far. Don't worry - learning curves hold you back! I've curated a set of free, high-quality resources to jumpstart your Linux and Docker skills. Below are the video courses & articles to master them.<br/>
@@ -121,8 +129,6 @@ The primary purpose of `kubectl logs` is to facilitate the examination of real-t
 * `Review past events`: `kubectl logs` allows to access past deployments, container restarts, errors, and other events through historical logs. This can help customers reconstruct timelines, investigate incidents, and understand changes in cluster configuration. <br/>
 * `Improvement identification`: Analyzing historical logs can reveal recurring issues, performance bottlenecks, or inefficient configurations. This information helps identify areas for improvement in processes and configurations.<br/>
 * `Application insights`: Examining logs provides valuable insights into application behavior, including successful operations, error messages, resource usage, and performance metrics.<br/>
-* `Bottleneck identification`: Logs can expose performance bottlenecks or resource constraints affecting application's operation. By analyzing log data, customers can pinpoint bottlenecks and take steps to optimize application's performance.<br/>
-* `Informed decision-making`: Through log analysis, customers gain a deeper understanding of application's behavior and its interaction with the underlying infrastructure. This knowledge can empower customers to make informed decisions about future optimizations, resource allocation, and configuration changes.<br/>
 
 ### kubectl logs key commands <br/>
 
