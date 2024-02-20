@@ -1,6 +1,6 @@
 # [work in progress] A practical guide to debugging/troubleshooting kubernetes applications - Mastering Logs, Events, best industry practices and kubectl for Seamless Debugging and Insights.
 ## Introduction
-Welcome to my in-depth exploration of Kubernetes application logging. This guide will equip you with the battle-tested techniques/tricks and industry best practices to demystify the inner workings of kubernetes applications.<br/>
+Welcome to an in-depth exploration of Kubernetes application logging. This guide will equip you with the battle-tested techniques and industry best practices to demystify the inner workings of kubernetes applications.<br/>
 
 This blog will help to effectively debug and analyze kubernetes applications to make things easy for architects/developers to orchestrate containers by Kubernetes. Given that Kubernetes is complex, knowing where to look for that data and how to interpret it can be tricky but very important. I have applied these techniques/strategies and industry best practices to troubleshoot critical issues resulting in faster resolution times. You will get all the Kubernetes logging & debugging essentials right here and can fix critical Kubernetes issues much faster with this actionable guide. <br/>
 
