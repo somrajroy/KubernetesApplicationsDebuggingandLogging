@@ -95,14 +95,13 @@ In summary, application logs are a subset of container logs, which, in turn, are
 * `kubectl events -o yaml` : List recent events in YAML format <br/>
 
 ### Tips/tricks to effectively utilize events <br/>
-* Use namespaces to organize events for large clusters or if there are multiple applications and different clusters. I had this in my last project and ensured that customer has different clusters. Consider creating separate namespaces for different environments (e.g., development, staging, production). Namespace isolation ensures that events are neatly categorized and don’t overlap. Organizing events with namespaces is a crucial point for clarity and managing large clusters. <br/>
+* `Use namespaces to organize events for large clusters or if there are multiple applications and different clusters`. I had this in my last project and ensured that customer has different clusters. Consider creating separate namespaces for different environments (e.g., development, staging, production). Namespace isolation ensures that events are neatly categorized and don’t overlap. Organizing events with namespaces is a crucial point for clarity and managing large clusters. <br/>
 * Combine kubectl events with other tools like `kubectl describe`, `kubectl logs`, and `kubectl get` for deeper troubleshooting. <br/>
-* Leverage monitoring tools that aggregate and analyze events for broader cluster inights. <br/>
-* By effectively utilizing kubectl events, one can gain valuable insights into Kubernetes cluster's health, troubleshoot issues faster, and ensure the smooth operation of applications. <br/>
-* Set up RBAC (Role-Based Access Control) for Event Monitoring : Ensure that access to `kubectl events` and other related commands is restricted based on the principle of least privilege. Set up RBAC rules to control who can access event information, helping to maintain security and prevent unauthorized access to critical cluster data. Security considerations and RBAC setup adds a significant dimension. <br/>
-* Use Labels and Annotations for Enhanced Event Context & enriching events with labels/annotations: When creating resources in Kubernetes, consider using labels and annotations to add additional context to events. This will make it easier to filter and understand events related to specific applications, environments, or other custom criteria, providing more detailed insights. <br/>
-* Tailing events for real-time updates: Execute `--watch` for continuous monitoring. <br/>
-* Filtering by severity: Highlighting filtering by severity (`--field-selector=level=Warning`) could aid troubleshooting.
+* Leverage monitoring tools that aggregate and analyze events for broader cluster inights. By effectively utilizing kubectl events, one can gain valuable insights into Kubernetes cluster's health, troubleshoot issues faster, and ensure the smooth operation of applications. <br/>
+* `Set up RBAC (Role-Based Access Control) for Event Monitoring` : Ensure that access to `kubectl events` and other related commands is restricted based on the principle of least privilege. Set up RBAC rules to control who can access event information, helping to maintain security and prevent unauthorized access to critical cluster data. Security considerations and RBAC setup adds a significant dimension. <br/>
+* `Use Labels and Annotations for Enhanced Event Context & enriching events with labels/annotations`: When creating resources in Kubernetes, consider using labels and annotations to add additional context to events. This will make it easier to filter and understand events related to specific applications, environments, or other custom criteria, providing more detailed insights. <br/>
+* `Tailing events for real-time updates`: Execute `--watch` for continuous monitoring. <br/>
+* `Filtering by severity`: Highlighting filtering by severity (`--field-selector=level=Warning`) could aid troubleshooting.
 
 ## Links/Guide to Kubernetes Events <br/> 
 
@@ -148,28 +147,27 @@ The primary purpose of `kubectl logs` is to facilitate the examination of real-t
 * Please refer to the [Kubernetes log documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) to learn more about different flags that can be used.<br/>
 
 ## Tips/tricks to effectively utilize kubectl logs <br/>
-* Organize Logs with Namespaces: Use namespaces to separate logs for different environments or applications. <br/>
-* Structured Logging & Custom Formatting for Logs : Using structured logging formats like JSON can make it easier to search, filter, and analyze log data. Consider configuring the applications to log messages in 
-  a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated log analysis tools, improving overall log readability and searchability. <br/>
-* Use labels and selectors to filter logs: Kubernetes allows to label pods and use selectors to filter logs from specific pods or containers. This can be helpful when there are a large number of pods and 
+* `Organize Logs with Namespaces`: Use namespaces to separate logs for different environments or applications. <br/>
+* `Structured Logging & Custom Formatting for Logs` : Using structured logging formats like JSON can make it easier to search, filter, and analyze log data. Consider configuring the applications to log messages in a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated log analysis tools, improving overall log readability and searchability. <br/>
+* `Use labels and selectors to filter logs`: Kubernetes allows to label pods and use selectors to filter logs from specific pods or containers. This can be helpful when there are a large number of pods and 
   customers/developers want to focus on specific ones. Using label selectors with kubectl logs can help aggregate logs from pods with specific labels, which is useful for monitoring applications across multiple 
   pods. This can also help manage the logging directory structure and prevent logs from taking up too much disk space. It involves archiving or deleting old logs. <br/>
-* Logging Levels: Including different log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) can help categorize log messages based on their severity, which is useful during troubleshooting and debugging. <br/>
-* Log Rotation and Retention Policies: Consider configuring the applications to log messages in a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated 
+* `Logging Level`s: Including different log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) can help categorize log messages based on their severity, which is useful during troubleshooting and debugging. <br/>
+* `Log Rotation and Retention Policies`: Consider configuring the applications to log messages in a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated 
   log analysis tools, improving overall log readability and searchability. <br/>
-* Time-Based Log Retrieval: Utilizing flags like `--since`, `--since-time`, and `--previous` can help retrieve logs based on time or the previous instance of a container, which is useful for troubleshooting 
+* `Time-Based Log Retrieval`: Utilizing flags like `--since`, `--since-time`, and `--previous` can help retrieve logs based on time or the previous instance of a container, which is useful for troubleshooting 
   recent issues <br/>
-* Sensitive Information: It's important to avoid logging sensitive information. Use environment variables or secrets to store such data securely. <br/>
-* Contextual Information: Including timestamps, hostnames, and request IDs in logs can help in correlating log events and troubleshooting issues. <br/>
-* Monitor Resource Usage : Track resource usage when retrieving logs, especially in production environments. Fetching extensive logs from multiple containers may impact the performance of the cluster. Customers 
-  should be mindful of the resources consumed by log retrieval operations. <br/>
-* Log Streaming (Aggregate and Analyze): Streaming logs to a centralized log server or log management system is recommended for efficient searching, analysis, and long-term retention of logs. Leverage tools like 
-  FluentbIT or ELK to collect and analyze logs from various sources. <BR/>
-* Integrate with Monitoring and Alerting Systems : Integrate logs with monitoring and alerting systems. This allows to set up alerts based on specific log events or patterns, enabling proactive issue detection 
+* `Sensitive Information`: It's important to avoid logging sensitive information. Use environment variables or secrets to store such data securely. <br/>
+* `Contextual Information`: Including timestamps, hostnames, and request IDs in logs can help in correlating log events and troubleshooting issues. <br/>
+* `Monitor Resource Usage` : Track resource usage when retrieving logs, especially in production environments. Fetching extensive logs from multiple containers may impact the performance of the cluster. 
+  Customers should be mindful of the resources consumed by log retrieval operations. <br/>
+* `Log Streaming (Aggregate and Analyze)`: Streaming logs to a centralized log server or log management system is recommended for efficient searching, analysis, and long-term retention of logs. Leverage tools 
+   like FluentBit or ELK to collect and analyze logs from various sources. <BR/>
+* `Integrate with Monitoring and Alerting Systems` : Integrate logs with monitoring and alerting systems. This allows to set up alerts based on specific log events or patterns, enabling proactive issue detection 
   and rapid response to critical incidents. <br/>
-* Filter and Search: Use tools like grep or dedicated log viewers for filtering and searching through large log volumes. <br/>
-* Set Up Logging Drivers: Configure logging drivers for structured log formats and easier parsing. <br/>
-* Control Plane Logs: Tailing the logs of Kubernetes control plane components like the API server, controller manager, scheduler, and etcd can provide insights into the cluster's behavior. This maynot be 
+* `Filter and Search`: Use tools like grep or dedicated log viewers for filtering and searching through large log volumes. <br/>
+* `Set Up Logging Drivers`: Configure logging drivers for structured log formats and easier parsing. <br/>
+* `Control Plane Logs`: Tailing the logs of Kubernetes control plane components like the API server, controller manager, scheduler, and etcd can provide insights into the cluster's behavior. This maynot be 
   required for serverless services (e.g. AWS EKS Fargate).  <br/>
 
 # Kubectl "exec"
