@@ -13,7 +13,7 @@ Below are the crucial benefits if anyone masters the techniques, strategies and 
 * `Gain deeper application insights`: Understand how applications behave, optimize performance, and ensure smooth operation. <br/>
 * Logs also helps in `Application improvement` and `Performance optimization`. <br/>
 # Who is this guide for?
-This guide is intended to help people at all levels and roles. I have applied most of these techniques/strategies in real-time projects & have witnessed first-hand the positive impact they can have on project outcomes. All my recommendations are documented in this blog. <br/>
+This guide is intended to help people at all levels and roles. I have applied most of these techniques/strategies in real-time projects & have witnessed first-hand the positive impact they can have on project outcomes.  <br/>
 1. Kubernetes developers/admistrators and enthusiasts. <br/>
 2. Architects & customers looking for `Application improvement` and `Performance optimization`.
 3. Architects/Delivery Managers/Customers : The industry practices and tips/tricks can help in streamlining deployment strategies resulting in reduced downtime, improved application performance, and enhanced 
