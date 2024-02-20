@@ -11,6 +11,7 @@ Below are the crucial benefits if anyone masters the techniques, strategies and 
 * `Pinpoint issues rapidly & Bottleneck identification`: Logs expose performance bottlenecks or resource constraints affecting application's operation. By analyzing log data, customers can pinpoint bottlenecks and take steps to optimize application's performance. They help to diagnose problems quicker and with more precision. <br/>
 * `Informed decision-making`: Through log analysis, architects/customers gain a deeper understanding of application's behavior and its interaction with the underlying infrastructure. This knowledge can empower customers to make informed decisions about future optimizations, resource allocation, and configuration changes.<br/>
 * `Gain deeper application insights`: Understand how applications behave, optimize performance, and ensure smooth operation. <br/>
+* Logs also helps in `Application improvement` and `Performance optimization`. <br/>
 
 # Linux and Docker
 To be effective in container orchestration using Kubernetes - a good knowledge of Linux & Docker is required because it all starts from there. Without Linux its difficult to go far. Don't worry - learning curves won't hold you back! I've curated a set of free, high-quality resources to jumpstart your Linux and Docker skills. Below are the video courses & articles to master them.<br/>
