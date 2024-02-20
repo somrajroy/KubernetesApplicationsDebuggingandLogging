@@ -13,7 +13,7 @@ Below are the crucial benefits if anyone masters the techniques, strategies and 
 * `Gain deeper application insights`: Understand how applications behave, optimize performance, and ensure smooth operation. <br/>
 
 # Linux and Docker
-To be effective in container orchestration using Kubernetes - a good knowledge of Linux & Docker is required because it all starts from there. Without Linux its difficult to go far. Don't worry - learning curves hold you back! I've curated a set of free, high-quality resources to jumpstart your Linux and Docker skills. Below are the video courses & articles to master them.<br/>
+To be effective in container orchestration using Kubernetes - a good knowledge of Linux & Docker is required because it all starts from there. Without Linux its difficult to go far. Don't worry - learning curves won't hold you back! I've curated a set of free, high-quality resources to jumpstart your Linux and Docker skills. Below are the video courses & articles to master them.<br/>
     * [Linux crash Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW) <br/>
     * [Bash scripting on Linux](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w) <br/>
     * [Bash Scripting for Beginners](https://www.youtube.com/playlist?list=PLKMOdY6Bhga5fmUcQQwhfL9thR_Yp1hZ7) <br/>
