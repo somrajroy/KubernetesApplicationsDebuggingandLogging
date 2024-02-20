@@ -152,7 +152,7 @@ The primary purpose of `kubectl logs` is to facilitate the examination of real-t
 * `Use labels and selectors to filter logs`: Kubernetes allows to label pods and use selectors to filter logs from specific pods or containers. This can be helpful when there are a large number of pods and 
   customers/developers want to focus on specific ones. Using label selectors with kubectl logs can help aggregate logs from pods with specific labels, which is useful for monitoring applications across multiple 
   pods. This can also help manage the logging directory structure and prevent logs from taking up too much disk space. It involves archiving or deleting old logs. <br/>
-* `Logging Level`s: Including different log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) can help categorize log messages based on their severity, which is useful during troubleshooting and debugging. <br/>
+* `Logging Levels`: Including different log levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) can help categorize log messages based on their severity, which is useful during troubleshooting and debugging. <br/>
 * `Log Rotation and Retention Policies`: Consider configuring the applications to log messages in a structured and standardized format (e.g., JSON). This makes it easier to parse and analyze logs using dedicated 
   log analysis tools, improving overall log readability and searchability. <br/>
 * `Time-Based Log Retrieval`: Utilizing flags like `--since`, `--since-time`, and `--previous` can help retrieve logs based on time or the previous instance of a container, which is useful for troubleshooting 
