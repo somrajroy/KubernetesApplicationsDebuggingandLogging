@@ -1,4 +1,4 @@
-# [work in progress] A practical guide to debugging/troubleshooting kubernetes applications - Mastering Logs, Events & industry practices
+# A practical guide to debugging/troubleshooting kubernetes applications - Mastering Logs, Events & industry practices
 ## Introduction
 Welcome to an in-depth exploration of Kubernetes application logging. This guide will equip anyone with the battle-tested techniques and industry best practices to demystify the inner workings of kubernetes applications.<br/>
 
